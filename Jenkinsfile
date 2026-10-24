@@ -70,7 +70,7 @@ pipeline {
 
     post {
         success {
-            archiveArtifacts artifacts: 'dist/**', fingerprint: true
+            echo 'CI pipeline completed successfully'
         }
         failure {
             echo 'CI pipeline failed'
