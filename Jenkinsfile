@@ -58,9 +58,7 @@ pipeline {
 
         stage('Deploy') {
             when {
-                expression {
-                    params.ENVIRONMENT == 'Production'
-                }
+                branch 'main'
             }
             steps {
                 bat 'echo Deploying to Production'
